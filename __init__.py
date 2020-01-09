@@ -22,7 +22,7 @@ def _log_error(exc):
 @implementer(IArchiver)
 class Archiver(object):
 
-    name = "telegran webhook"
+    name = "telegram webhook"
     keys = [
         "archived-at",
         "delivered-to",
