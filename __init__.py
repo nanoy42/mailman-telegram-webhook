@@ -57,6 +57,11 @@ class Archiver(object):
             self.chat_id = None
 
         try:
+            self.filter_spam = archiver_config.get("global", "filter_spam")
+        except (KeyError, NoOptionError):
+            self.filter_spam = False
+
+        try:
             for section in archiver_config.sections():
                 if section.startswith("list."):
                     list_name = section[5:]
@@ -92,7 +97,8 @@ class Archiver(object):
         message = "New message from {from} to {to} : {subject}"
 
         information_msg = message.format(**format_dict)
-        self._send_to_telegram(information_msg, mlist.list_name)
+        if (self.filter_spam and not "SPAM" in subject) or not self.filter_spam:
+            self._send_to_telegram(information_msg, mlist.list_name)
 
     def _send_to_telegram(self, message, list_name):
         """
