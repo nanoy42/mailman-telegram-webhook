@@ -8,6 +8,8 @@ Want to send message to telegram chats when receiving an email on a mailing list
 
 Create the folder `/usr/lib/python3/dist-packages/mailman_telegram/webhook` and copy the `__init__.py` file inside.
 
+You will need the python-telegram-bot package (as specified in the dependencies files).
+
 Then copy the `mailam-telegram-webhook.cfg` file to `/ect/mailman3` and edit it :
 
  * You need to set the token to a valid telegram bot token
