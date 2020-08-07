@@ -3,14 +3,14 @@ Archiver sending message to telegram chats.
 """
 
 import logging
-
-from mailman.interfaces.archiver import IArchiver
-from zope.interface import implementer
-from mailman.config import config
-from mailman.config.config import external_configuration
 from configparser import NoOptionError
 
 from telegram.ext import Updater
+
+from mailman.config import config
+from mailman.config.config import external_configuration
+from mailman.interfaces.archiver import IArchiver
+from zope.interface import implementer
 
 logger = logging.getLogger("mailman.archiver")
 

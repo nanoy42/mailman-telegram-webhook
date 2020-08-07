@@ -1,12 +1,25 @@
 # Mailman Telegram Webhook
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Code style black](https://img.shields.io/badge/code%20style-black-000000.svg)]("https://github.com/psf/black)
+[![GitHub release](https://img.shields.io/github/release/nanoy42/dinomail.svg)](https://github.com/nanoy42/dinomail/releases/)
+[![PyPI version fury.io](https://badge.fury.io/py/mailman-telegram-webhook.svg)](https://pypi.org/project/mailman-telegram-webhook/)
+
 Want to send message to telegram chats when receiving an email on a mailing list ? This script do it for you.
 
 ## Installation
 
 ### Installation procedure
 
-Create the folder `/usr/lib/python3/dist-packages/mailman_telegram/webhook` and copy the `__init__.py` file inside.
+It is possible to install the package via pip :
+
+```
+pip install mailman-telegram-webhook
+```
+
+but make sure to install it at good location. The config file is also downloaded with the python file.
+
+Create the folder `/usr/lib/python3/dist-packages/mailman_telegram_webhook` and copy the `__init__.py` file inside.
 
 You will need the python-telegram-bot package (as specified in the dependencies files).
 
@@ -81,4 +94,4 @@ Example :
 
 ### Can I change the message on telegram ?
 
-No cannot change it in the configuration but you can edit the message in the `__init__.py` file, in the `archive_message` function. 
+No. You cannot change it in the configuration but you can edit the message in the `__init__.py` file, in the `archive_message` function. 
