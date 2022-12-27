@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mailman-telegram-webhook"
+version = "0.8.0"
+description = "A small archiver sending message to telegram chats."
+authors = ["Yoann Piétri <me@nanoy.fr>"]
+readme = "README.md"
+license = "GPLv3"
+packages = [{include = "mailman_telegram_webhook"}]
+include = ["mailman-telegram-webhook.cfg"]
+repository = "https://github.com/nanoy42/mailman-telegram-webhook"
+keywords = ["mailman", "telegram", "webhook"]
+
+[tool.poetry.dependencies]
+python = ">=3.7, <4"
+python-telegram-bot = "^13.15"
+
+
+[tool.poetry.group.dev.dependencies]
+twine = "^4.0.2"
+black = "^22.12.0"
+isort = "^5.11.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
